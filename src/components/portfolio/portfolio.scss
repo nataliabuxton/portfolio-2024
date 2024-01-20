@@ -1,0 +1,35 @@
+// portfolio.scss
+.portfolio { 
+    overflow: hidden;
+  
+    .progress {
+      margin-top: 20px;
+  
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+    }
+  
+    .portfolio-slider {
+      .slick-prev,
+      .slick-next {
+        font-size: 24px;
+      }
+  
+      .slick-prev {
+        left: -30px;
+      }
+  
+      .slick-next {
+        right: -30px;
+      }
+  
+      .portfolio-item {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    }
+  }
+  

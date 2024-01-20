@@ -3,7 +3,7 @@ import "./about.scss";
 import styled from "styled-components";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, StatsGl } from "@react-three/drei";
-import CloudComponent from "./cloud.jsx";
+import CloudComponent from "./Cloud.jsx";
 import Button from 'react-bootstrap/Button';
 import { motion } from 'framer-motion';
 

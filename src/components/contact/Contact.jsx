@@ -6,6 +6,11 @@ import Map from "./Map";
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+
+  @media (min-width: 768px) {
+
+  }
 `;
 
 const Container = styled.div`
@@ -14,6 +19,13 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 450px;
+    height: 100%;
+  }
 `;
 
 const Left = styled(motion.div)`
@@ -21,19 +33,28 @@ const Left = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+
 
   @media only screen and (max-width: 768px) {
     justify-content: center;
+    z-index: 3;
   }
 `;
 
 const Title = styled.h1`
-  font-weight: 900;
+  font-weight: 300;
   display: flex;
   justify-content: center;
   font-size: 2rem;
-  color: black;
-`;
+  color: white;
+  text-transform: uppercase;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+
+   @media only screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+  `;
 
 const Form = styled(motion.form)`
   width: 500px;
@@ -41,42 +62,46 @@ const Form = styled(motion.form)`
   flex-direction: column;
   gap: 25px;
   cursor: pointer;
+  justify-content: center;
   
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
+    width: 80%;
+    height: 80px
   }
 `;
 
 const StyledInput = styled(motion.input)`
   padding: 20px;
-  background-color: #white;
-  border: none;
-  border-radius: 48px;
+  background-color: #1B3038;
+  border: white .5px solid;
+  border-radius: 5px;
   font-size: 1rem;
   text-align: center;
+  color: white;
 
 `;
 
 const StyledTextArea = styled(motion.textarea)`
   padding: 20px;
-  border: none;
-  border-radius: 40px;
-  background-color: white;
-  color: black;
+  border: white .5px solid;
+  border-radius: 5px;
+  background-color: #1B3038;
+  color: white;
   font-size: 1rem;
   text-align: center;
 
 `;
 
 const StyledButton = styled(motion.button)`
-  background-color: white;
-  color: grey;
-  border: none;
-  font-weight: 300;
+  background-color: #1B3038;
+  color: white;
+  border: white .5px solid;
+  font-weight: 200;
   cursor: pointer;
-  border-radius: 70px;
-  padding: 20px;
+  border-radius: 5px;
+  padding: 14px;
+  width: 100%;
   font-size: 1.2rem;
   transition: background-color 0.6s;
 `;
@@ -85,7 +110,8 @@ const Right = styled(motion.div)`
   flex: 1;
 
   @media only screen and (max-width: 768px) {
-    display: none;
+    width: 100%;
+    height: 60%;
   }
 `;
 
@@ -96,26 +122,25 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Assuming you have configured emailjs, uncomment and update the following lines
-    /*
-    emailjs
-      .sendForm(
-        "service_id",
-        "template_id",
-        ref.current,
-        "public_key"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setSuccess(true);
-        },
-        (error) => {
-          console.log(error.text);
-          setSuccess(false);
-        }
-      );
-    */
+
+    // emailjs
+    //   .sendForm(
+    //     "service_id",
+    //     "template_id",
+    //     ref.current,
+    //     "public_key"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //       setSuccess(true);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //       setSuccess(false);
+    //     }
+    //   );
+
   };
 
   const formVariants = {

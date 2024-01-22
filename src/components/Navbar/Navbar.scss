@@ -1,7 +1,9 @@
-.navbar{
+/* Default styles for larger screens */
+.navbar {
     height: 100px;
+}
 
-.wrapper{
+.wrapper {
     max-width: 1000px;
     width: 100%;
     margin: auto;
@@ -10,19 +12,59 @@
     justify-content: space-between;
     height: 100%;
 
-
-    span{
+    span {
         font-weight: bolder;
-        color: Black;
+        color: black;
     }
-    .social{
+
+    .social {
         display: flex;
         gap: 15px;
-        img{
+        z-index: 10;
+
+        img {
             width: 18px;
-            border-radius: .7rem;
+            border-radius: 0.7rem;
         }
     }
-  }
-  
-};
+    .NB{
+        visibility: hidden;
+        z-index: -1000;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        height: 80px; 
+    }
+
+    .wrapper {
+        padding: 0 20px;
+    }
+}
+
+/* Media query for small screens (phones) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: 50px; 
+    }
+
+    .wrapper {
+        padding: 0 15px; 
+        flex-direction: column;
+
+        .NB{
+            visibility: visible;
+            z-index: -1000;
+            font-family: "M PLUS Rounded 1c", sans-serif;
+            font-weight: 100;
+            display: flex;
+            flex-direction: column;
+        }
+
+        Button{
+            max-width: fit-content;
+            padding: 5px;
+        }
+    }
+}

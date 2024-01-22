@@ -3,6 +3,10 @@
 html{
     scroll-snap-type:  y mandatory;
     scroll-behavior: smooth;
+
+    @media only screen and (max-width: 768px) {
+        scroll-snap-type:  none;
+    }
 }
 
 *{
@@ -12,6 +16,7 @@ html{
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-weight: 100;
     font-style: normal;
+
 }
 
 body{
@@ -26,5 +31,5 @@ a{
 
 section{
     height: 100vh;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
 };

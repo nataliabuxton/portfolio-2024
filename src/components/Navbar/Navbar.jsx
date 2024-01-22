@@ -1,7 +1,7 @@
 import "./Navbar.scss";
 import { motion } from "framer-motion";
 import Sidebar from "./sidebar/Sidebar";
-import CVDoc from "../../assets/NataliaBuxton_CV_Hosp.pdf";
+import CVDoc from "../../assets/NataliaBuxtonCV_2024-1.pdf";
 import Button from "react-bootstrap/Button";
 
 const Navbar = () => {
@@ -17,7 +17,6 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      {/* sidebar */}
       <Sidebar />
       <div className="wrapper">
         <motion.span
@@ -25,7 +24,9 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
         >
         </motion.span>
-
+        <motion.h1  className="NB">
+                NB
+        </motion.h1>
         <motion.div
           className="social"
           variants={socialContainerVariants}

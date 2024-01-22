@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import "./togglebutton.scss";
 
 const ToggleButton = ({ setOpen }) => {
   return <button onClick={() => setOpen((prev) => !prev)}>

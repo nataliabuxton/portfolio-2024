@@ -38,18 +38,15 @@ const Services = () => {
     <motion.div className="services" variants={containerAnimation} initial="hidden" animate="visible">
       <motion.div className="titleContainer">
         <motion.div className="title" variants={titleAnimation}>
-          <h1>Creating Unique, Beautiful and <b>functional</b> Web Designs</h1>
+          <h1 className="titleTxt">SKILLS</h1>
         </motion.div>
         <motion.div className="title" variants={titleAnimation}>
           <h1>
-            Here's a <b>Sneak Peak</b> at some of my popular projects.
+          <h1>The way I create is <b>Unique</b>,</h1>
+
+            here's a look at what I can offer you.
           </h1>
         </motion.div>
-        <motion.p className="subtitle" variants={titleAnimation}>
-          <a href="https://github.com/nataliabuxton" target="_blank">
-            Head over to my github to see them in action!
-          </a>
-        </motion.p>
       </motion.div>
       <motion.div className="listContainer" variants={boxAnimation}>
         <motion.div className="box box1" whileHover={scaleAnimation} animate={scaleOutAnimation}>
@@ -69,11 +66,12 @@ const Services = () => {
         </motion.div>
         <motion.div className="box box4" whileHover={scaleAnimation} animate={scaleOutAnimation}>
           <div className="boxText">
-            <h2>App & Mobile</h2>
+            <h2>Brand Identity</h2>
           </div>
         </motion.div>
       </motion.div>
     </motion.div>
+    
   );
 };
 

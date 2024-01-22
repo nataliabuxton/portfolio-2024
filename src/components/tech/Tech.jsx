@@ -59,6 +59,12 @@ const Tech = () => {
                 variants={imageVariants}
                 whileHover={{ y: -20, scale: 1.1 }}
               />
+                <motion.img
+                src="../public/html-5.png"
+                alt=""
+                variants={imageVariants}
+                whileHover={{ y: -20, scale: 1.1 }}
+              />
               <motion.img
                 src="../public/bootstrap.png"
                 alt=""
@@ -67,12 +73,6 @@ const Tech = () => {
               />
               <motion.img
                 src="../public/css-3.png"
-                alt=""
-                variants={imageVariants}
-                whileHover={{ y: -20, scale: 1.1 }}
-              />
-              <motion.img
-                src="../public/js.png"
                 alt=""
                 variants={imageVariants}
                 whileHover={{ y: -20, scale: 1.1 }}
@@ -91,8 +91,8 @@ const Tech = () => {
                 variants={imageVariants}
                 whileHover={{ y: -20, scale: 1.1 }}
               />
-              <motion.img
-                src="../public/html-5.png"
+                <motion.img
+                src="../public/js.png"
                 alt=""
                 variants={imageVariants}
                 whileHover={{ y: -20, scale: 1.1 }}

@@ -24,10 +24,10 @@ const Map = () => {
       <ZoomableGroup>
         <Geographies
           geography="/features.json"
-          fill="#3D5C35"
-          stroke="green"
+          fill="#ffffff"
+          stroke="#1B3038"
           strokeWidth={0.5}
-          opacity={0.8}
+          opacity={0.5}
         >
           {({ geographies }) =>
             geographies.map((geo) => (
@@ -40,7 +40,7 @@ const Map = () => {
           dx={-90}
           dy={-30}
           connectorProps={{
-            stroke: "red",
+            stroke: "#1B3038",
             strokeWidth: 1,
             strokeLinecap: "round",
           }}

@@ -8,12 +8,13 @@ import Button from 'react-bootstrap/Button';
 import { motion } from 'framer-motion';
 
 const Section = styled.div`
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 200;
+height: 100vh;
+overflow: hidden;
+position: relative;
+display: flex;
+font-family: "M PLUS Rounded 1c", sans-serif;
+font-weight: 200;
+
 `;
 
 const Container = styled.div`
@@ -21,6 +22,12 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+
+  }
 `;
 
 const Left = styled.div`
@@ -41,6 +48,9 @@ const Right = styled.div`
   margin-top: 10px;
   gap: 6px;
   color: white;
+  @media only screen and (max-width: 768px) {
+    grid-template-column: (1fr,1fr);
+  }
 `;
 
 const Title = styled(motion.h1)`
@@ -49,14 +59,21 @@ const Title = styled(motion.h1)`
   font-weight: 200;
   text-align: center;
   text-decoration: underline 0.5px solid white;
+  @media only screen and (max-width: 768px) {
+    font-size: 1em;
+  }
 `;
 
 const BodyTxt = styled(motion.p)`
-  font-size: 1em;
+  font-size: 1.2em;
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 200;
   line-height: 1.5;
   color: white;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 0.9em;
+  }
 `;
 
 const BtnContainer = styled.div`
@@ -67,6 +84,12 @@ const BtnContainer = styled.div`
   margin-bottom: 20px;
   margin-left: 20px;
   justify-content: flex-center;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+    height: none;
+    width: none;
+  }
 `;
 
 const Img1 = styled.img`
@@ -83,8 +106,8 @@ const Img1 = styled.img`
   opacity: 70%;
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    width: 55px;
+    height: 55px;
   }
 
   @keyframes animate {
@@ -108,8 +131,9 @@ const Img1a = styled.img`
   opacity: 30%;
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    width: 55px;
+    height: 55px;
+
   }
 
   @keyframes animate {
@@ -133,8 +157,8 @@ const Img2 = styled.img`
   opacity: 20%;
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    width: 55px;
+    height: 55px;
   }
 
   @keyframes animate {
@@ -159,8 +183,9 @@ const Img3 = styled.img`
   opacity: 40%;
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    width: 55px;
+    height: 55px;
+    
   }
 
   @keyframes animate {
@@ -185,8 +210,8 @@ const Img4 = styled.img`
   opacity: 20%;
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    width: 90px;
+    height: 90px;
   }
 
   @keyframes animate {

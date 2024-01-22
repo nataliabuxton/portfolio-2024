@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 
+
 const Section = styled.div`
     height: calc(100vh - 100px);
     overflow: hidden;
@@ -12,9 +13,12 @@ const Section = styled.div`
     z-index: 1;
 
   @media only screen and (max-width: 768px) {
-    height: 200vh;
-  }
-`;
+    height: calc(100vh - 200px) !important;
+    position: relative;
+    scroll-snap-align: none;
+  }`
+  ;
+
 
 const Container = styled.div`
 height: 100%;
@@ -26,6 +30,8 @@ z-index: 1;
 
   @media only screen and (max-width: 768px) {
     width: 100%;
+    height: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -33,27 +39,48 @@ z-index: 1;
 `;
 
 const Left = styled.div`
-  width: 40%;
-  height: 100%;
-  display: flex;
-  padding-bottom: 250px;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
+width: 100%;
+height: 100%;
+display: flex;
+padding-bottom: 250px;
+flex-direction: column;
+justify-content: center;
+gap: 4px;
 
   @media only screen and (max-width: 768px) {
-    content: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    font-size: 8px;
+    margin-left: -50px;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
+const LeftMain = styled.div`
+
+  @media only screen and (max-width: 768px) {
+    padding-top: 200px;
+    padding-left: 30px;
+  }
+}`;
+
 const Title = styled.h1`
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 50px;
-  color: black;
-  text-transform: uppercase;
-  letter-spacing: 11px;
+font-family: "M PLUS Rounded 1c", sans-serif;
+font-weight: 300;
+font-style: normal;
+font-size: 42px;
+color: black;
+text-transform: uppercase;
+letter-spacing: 11px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 5px;
+  }
 `;
 
 const Sub = styled.h2`
@@ -62,6 +89,11 @@ const Sub = styled.h2`
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 200;
   letter-spacing: 7px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 20px;
+    padding-top: 20px;
+  }
 `;
 
 const Right = styled.div`
@@ -74,28 +106,38 @@ const Right = styled.div`
   overflow: true;
   
 
-  @media only screen and (max-width: 768px) {
-    flex: 1;
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    overflow: hidden;
     width: 100%;
+    z-index: -1;
+    
   }
 `;
 
+const SlidingMain = styled.div`
+  @media only screen and (max-width: 768px) {
+    display: none;
+    height: -50%;
+    width: 0%;
+  }`;
+
+
 const Img1 = styled.img`
-  width: 140px;
-  height: 300px;
-  object-fit: contain;
-  position: absolute;
-  top: 0;
-  bottom: 1;
-  right: 20%;
-  margin: auto;
-  animation: animate 1.2s infinite ease alternate;
-  z-index: 10;
-  opacity: 70%;
+width: 140px;
+height: 300px;
+object-fit: contain;
+position: absolute;
+top: 0;
+bottom: 1;
+right: 20%;
+margin: auto;
+animation: animate 1.2s infinite ease alternate;
+z-index: 10;
+opacity: 70%;
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    display: none;
   }
 
   @keyframes animate {
@@ -106,21 +148,20 @@ const Img1 = styled.img`
 `;
 
 const Img1a = styled.img`
-  width: 160px;
-  height: 300px;
-  object-fit: contain;
-  position: absolute;
-  top: 40%;
-  bottom: 2%;
-  right: 10%;
-  margin: auto;
-  animation: animate 1.5s infinite ease alternate;
-  z-index: 10;
-  opacity: 70%;
+width: 160px;
+height: 300px;
+object-fit: contain;
+position: absolute;
+top: 40%;
+bottom: 2%;
+right: 10%;
+margin: auto;
+animation: animate 1.5s infinite ease alternate;
+z-index: 10;
+opacity: 70%;
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    display: none;
   }
 
   @keyframes animate {
@@ -131,21 +172,20 @@ const Img1a = styled.img`
 `;
 
 const Img2 = styled.img`
-  width: 190px;
-  height: 300px;
-  object-fit: contain;
-  position: absolute;
-  top: 0;
-  bottom: 2;
-  left: 8%;
-  margin: auto;
-  animation: animate 1.6s infinite ease alternate;
-  z-index: 10;
-  opacity: 80%;
+width: 190px;
+height: 300px;
+object-fit: contain;
+position: absolute;
+top: 0;
+bottom: 2;
+left: 8%;
+margin: auto;
+animation: animate 1.6s infinite ease alternate;
+z-index: 10;
+opacity: 80%;
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    display: none;
   }
 
   @keyframes animate {
@@ -156,24 +196,22 @@ const Img2 = styled.img`
 `;
 
 const Img3 = styled.img`
-  width: 220px;
-  height: 300px;
-  object-fit: contain;
-  position: absolute;
-  top: 3;
-  bottom: 0;
-  right: 1;
-  left: 0;
-  margin: auto;
-  animation: animate 1.8s infinite ease alternate;
-  z-index: 10;
-  opacity: 90%;
+width: 220px;
+height: 300px;
+object-fit: contain;
+position: absolute;
+top: 3;
+bottom: 0;
+right: 1;
+left: 0;
+margin: auto;
+animation: animate 1.8s infinite ease alternate;
+z-index: 10;
+opacity: 90%;
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    display: none;
   }
-
   @keyframes animate {
     to {
       transform: translateY(50px);
@@ -182,22 +220,21 @@ const Img3 = styled.img`
 `;
 
 const Img4 = styled.img`
-  width: 700px;
-  height: 500px;
-  object-fit: contain;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 40%;
-  margin: auto;
-  animation: animate 2.3s infinite ease alternate;
-  z-index: 10;
-  opacity: 100%;
+width: 700px;
+height: 500px;
+object-fit: contain;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 40%;
+margin: auto;
+animation: animate 2.3s infinite ease alternate;
+z-index: 10;
+opacity: 100%;
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    display: none;
   }
 
   @keyframes animate {
@@ -245,7 +282,20 @@ const sliderVariants = {
 };
 
 
+const CanvasContainer = styled.div`
+  height: 100%;
+
+  @media only screen and (max-width: 768px) {
+    height: 40vh;
+    padding-right: 100px;
+    padding-top: 100px;
+  }
+`;
+
+
 const Hero = () => {
+
+
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
@@ -285,6 +335,7 @@ const Hero = () => {
   return (
     <Section>
       <Container>
+        <LeftMain>
         <Left
           variants={textVariants}
           initial="initial"
@@ -299,8 +350,8 @@ const Hero = () => {
             <Sub variants={textVariants}>A Frontend Developer & <br /> UX/UI Designer</Sub>
           </motion.div>
         </Left>
-
-        {/* Slidercontainer */}
+        </LeftMain>
+        <SlidingMain>
         <motion.div
           className="slidingTextContainer"
           variants={sliderVariants}
@@ -309,24 +360,25 @@ const Hero = () => {
         >
           Design, Create, Perfect, Initiate
         </motion.div>
+        </SlidingMain>
         <Right>
-          <Canvas>
-            <Suspense fallback={null}>
-              <OrbitControls enableZoom={false} />
-              <ambientLight intensity={1} />
-              <directionalLight position={[1, 2, 1]} />
-              <Sphere args={[1, 90, 1340]} scale={2.5}>
-                <MeshDistortMaterial
-                  clearcoat={2}
-                  roughness={1}
-                  color="#35484F"
-                  attach="material"
-                  distort={0.55}
-                  speed={1.2}
-                />
-              </Sphere>
-            </Suspense>
-          </Canvas>
+        <CanvasContainer>
+      <Canvas>
+        <OrbitControls enableZoom={false} />
+        <ambientLight intensity={1} />
+        <directionalLight position={[1, 2, 1]} />
+          <Sphere args={[1, 60, 1340]} scale={[2.1, 2.1, 2.1]}>
+            <MeshDistortMaterial
+              clearcoat={2}
+              roughness={1}
+              color="#35484F"
+              attach="material"
+              distort={0.55}
+              speed={1.2}
+            />
+          </Sphere>
+      </Canvas>
+    </CanvasContainer>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

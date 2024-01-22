@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Map from "./Map";
@@ -123,23 +124,23 @@ const Contact = () => {
     e.preventDefault();
 
 
-    // emailjs
-    //   .sendForm(
-    //     "service_id",
-    //     "template_id",
-    //     ref.current,
-    //     "public_key"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //       setSuccess(true);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //       setSuccess(false);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        "service_ngg6fir",
+        "template_mivqlkd",
+        ref.current,
+        import.meta.env.VITE_GMAIL_APP_PASSWORD
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSuccess(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setSuccess(false);
+        }
+      );
 
   };
 

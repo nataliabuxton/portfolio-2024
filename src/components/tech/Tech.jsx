@@ -54,31 +54,31 @@ const Tech = () => {
           <>
             <motion.div className="left-col" variants={containerVariants} initial="hidden" animate="visible">
               <motion.img
-                src="../public/atoms.png"
+                src="/atoms.png"
                 alt=""
                 variants={imageVariants}
                 whileHover={{ y: -20, scale: 1.1 }}
               />
                 <motion.img
-                src="../public/html-5.png"
+                src="/html-5.png"
                 alt=""
                 variants={imageVariants}
                 whileHover={{ y: -20, scale: 1.1 }}
               />
               <motion.img
-                src="../public/bootstrap.png"
+                src="/bootstrap.png"
                 alt=""
                 variants={imageVariants}
                 whileHover={{ y: -20, scale: 1.1 }}
               />
               <motion.img
-                src="../public/css-3.png"
+                src="/css-3.png"
                 alt=""
                 variants={imageVariants}
                 whileHover={{ y: -20, scale: 1.1 }}
               />
               <motion.img
-                src="../public/tailwindcss.svg"
+                src="/tailwindcss.svg"
                 alt=""
                 variants={imageVariants}
                 whileHover={{ y: -20, scale: 1.1 }}
@@ -86,25 +86,25 @@ const Tech = () => {
             </motion.div>
             <motion.div className="right-col" variants={containerVariants} initial="hidden" animate="visible">
               <motion.img
-                src="../public/sass.png"
+                src="/sass.png"
                 alt=""
                 variants={imageVariants}
                 whileHover={{ y: -20, scale: 1.1 }}
               />
                 <motion.img
-                src="../public/js.png"
+                src="/js.png"
                 alt=""
                 variants={imageVariants}
                 whileHover={{ y: -20, scale: 1.1 }}
               />
               <motion.img
-                src="../public/vite.svg"
+                src="/vite.svg"
                 alt=""
                 variants={imageVariants}
                 whileHover={{ y: -20, scale: 1.1 }}
               />
               <motion.img
-                src="../public/Three.js_Icon.svg.png"
+                src="/Three.js_Icon.svg.png"
                 alt=""
                 variants={imageVariants}
                 whileHover={{ y: -20, scale: 1.1 }}

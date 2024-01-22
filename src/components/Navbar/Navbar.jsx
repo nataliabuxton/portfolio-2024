@@ -1,7 +1,7 @@
 import "./Navbar.scss";
 import { motion } from "framer-motion";
 import Sidebar from "./sidebar/Sidebar";
-import CVDoc from "../../assets/NataliaBuxtonCV_2024-1.pdf";
+import CVDoc from "/NataliaBuxtonCV_2024-1.pdf";
 import Button from "react-bootstrap/Button";
 
 const Navbar = () => {

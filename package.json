@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 80 --host", 
+    "dev": "vite --port 80 --host",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.12.1",
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@react-three/drei": "^9.94.1",
     "@react-three/fiber": "^8.15.14",
@@ -17,6 +18,7 @@
     "@types/three": "^0.160.0",
     "@types/uuid": "^9.0.7",
     "bootstrap": "^5.3.2",
+    "email-js": "^2.0.2",
     "framer-motion": "^10.18.0",
     "leva": "^0.9.35",
     "react": "^18.2.0",

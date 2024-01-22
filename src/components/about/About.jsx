@@ -237,35 +237,35 @@ const About = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 1 }}
           >
-            <Img1 src="./3dhero.png" />
+            <Img1 src="/3dhero.png" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 2 }}
           >
-            <Img1a src="./3dhero.png" />
+            <Img1a src="/3dhero.png" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 3 }}
           >
-            <Img2 src="./3dhero.png" />
+            <Img2 src="/3dhero.png" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 4 }}
           >
-            <Img3 src="./3dhero.png" />
+            <Img3 src="/3dhero.png" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 5 }}
           >
-            <Img4 src="./3dhero.png" />
+            <Img4 src="/3dhero.png" />
           </motion.div>
         </Left>
         <Right>

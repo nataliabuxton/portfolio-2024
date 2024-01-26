@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { motion } from 'framer-motion';
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import Button from "react-bootstrap/Button";
 
 
 const Section = styled.div`
@@ -95,6 +96,7 @@ const Sub = styled.h2`
     padding-top: 20px;
   }
 `;
+
 
 const Right = styled.div`
   width: 100%;
@@ -348,6 +350,12 @@ const Hero = () => {
           >
             <Title variants={textVariants}>{displayedText}</Title>
             <Sub variants={textVariants}>A Frontend Developer & <br /> UX/UI Designer</Sub>
+            <Button className="btn btn-light"
+             href="https://github.com/nataliabuxton/kikagram"
+             target="_blank"
+             > 
+             See what Im working on at the moment!
+             </Button>
           </motion.div>
         </Left>
         </LeftMain>

@@ -350,7 +350,7 @@ const Hero = () => {
           >
             <Title variants={textVariants}>{displayedText}</Title>
             <Sub variants={textVariants}>A Frontend Developer & <br /> UX/UI Designer</Sub>
-            <Button className="btn btn-light"
+            <Button type="button" className="btn btn-light"
              href="https://github.com/nataliabuxton/kikagram"
              target="_blank"
              > 
